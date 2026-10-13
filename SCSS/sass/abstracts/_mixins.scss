@@ -1,0 +1,40 @@
+// =========================================================
+// ABSTRACTS / MIXINS
+// Tiga mixin reusable dipakai berulang di beberapa komponen,
+// supaya pola yang sama (flex, breakpoint, panel) tidak ditulis
+// ulang manual di tiap file.
+// =========================================================
+
+@use "variables" as v;
+
+// 1) Mixin flex — dipakai di navbar, kartu profil, form actions, dll
+@mixin flex(
+  $direction: row,
+  $align: flex-start,
+  $justify: flex-start,
+  $gap: v.$spacing-unit,
+  $wrap: wrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+  flex-wrap: $wrap;
+}
+
+// 2) Mixin breakpoint mobile — menggantikan penulisan ulang
+//    @media (max-width: 880px) di banyak tempat
+@mixin responsive-mobile {
+  @media (max-width: v.$breakpoint-mobile) {
+    @content;
+  }
+}
+
+// 3) Mixin surface — gaya "panel" (latar + radius + padding) yang
+//    dipakai berulang di sidebar dan blok sejenis
+@mixin surface($bg: var(--panel), $padding: v.$spacing-unit * 1.25) {
+  background-color: $bg;
+  border-radius: v.$radius;
+  padding: $padding;
+}

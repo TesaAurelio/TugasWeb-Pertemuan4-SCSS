@@ -1,0 +1,35 @@
+@use "../abstracts" as *;
+
+.button {
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 500;
+  border-radius: $radius;
+  padding: 0.6rem 1.4rem;
+  cursor: pointer;
+  border: 1px solid var(--ink);
+  transition:
+    background-color $transition-fast,
+    color $transition-fast,
+    border-color $transition-fast;
+
+  &--primary {
+    background-color: var(--signal);
+    border-color: var(--signal);
+    color: var(--cream);
+
+    &:hover {
+      background-color: var(--forest-mid);
+      border-color: var(--forest-mid);
+    }
+  }
+
+  &--ghost {
+    background-color: transparent;
+    color: var(--ink);
+
+    &:hover {
+      background-color: var(--panel);
+    }
+  }
+}

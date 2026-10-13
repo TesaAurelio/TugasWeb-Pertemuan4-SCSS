@@ -1,0 +1,37 @@
+$colors-light: (
+  paper: #faf9f4,
+  panel: #eef1ea,
+  ink: #16241f,
+  ink-soft: #063f26,
+  line: #dae1d5,
+  signal: #2f6b45,
+  signal-soft: #e6efe4,
+  flag: #a9822b,
+  flag-soft: #f5ecd4,
+  forest-deep: #0a1a12,
+  forest-mid: #16311f,
+  cream: #f2ecdb
+);
+
+$colors-dark: (
+  paper: #0d1410,
+  panel: #16201a,
+  ink: #e9efe6,
+  ink-soft: #93a89a,
+  line: #263429,
+  signal: #4fae72,
+  signal-soft: #16291c,
+  flag: #d9b654,
+  flag-soft: #2c2413
+);
+
+$spacing-unit: 1rem;
+$radius: 3px;
+$max-width: 1140px;
+
+$font-display: "Newsreader", Georgia, serif;
+$font-body: "Inter", system-ui, -apple-system, sans-serif;
+$font-id: "Consolas", "SFMono-Regular", Menlo, monospace;
+
+$transition-fast: 0.18s ease;
+$breakpoint-mobile: 880px;

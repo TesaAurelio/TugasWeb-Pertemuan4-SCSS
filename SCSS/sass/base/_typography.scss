@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: $font-body;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink);
+  background-color: var(--paper);
+}

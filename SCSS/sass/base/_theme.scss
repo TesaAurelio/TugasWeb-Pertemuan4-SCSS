@@ -1,0 +1,7 @@
+@use "../abstracts" as *;
+
+:root {
+  @each $nama, $nilai in $colors-light {
+    --#{$nama}: #{$nilai};
+  }
+}

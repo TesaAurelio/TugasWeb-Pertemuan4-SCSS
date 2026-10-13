@@ -1,0 +1,64 @@
+@use "../abstracts" as *;
+
+.contact-form {
+  display: grid;
+  gap: $spacing-unit * 1.5;
+
+  &__fieldset {
+    border: none;
+    border-top: 1px solid var(--line);
+    padding: 1.25rem 0 0;
+    @include flex($gap: 1.25rem);
+  }
+
+  &__legend {
+    font-family: $font-display;
+    font-style: italic;
+    font-size: 1rem;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1 1 220px;
+
+    &--full { flex: 1 1 100%; }
+  }
+
+  &__label {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+
+  &__input {
+    font: inherit;
+    color: var(--ink);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+    padding: 0.5rem 0.1rem;
+    width: 100%;
+    transition: border-color $transition-fast;
+
+    &:focus {
+      outline: none;
+      border-bottom-color: var(--signal);
+    }
+
+    &--color {
+      padding: 0.2rem;
+      height: 2.4rem;
+      border: 1px solid var(--line);
+    }
+  }
+
+  &__actions {
+    @include flex($gap: 0.75rem);
+    padding-top: 0.5rem;
+  }
+}

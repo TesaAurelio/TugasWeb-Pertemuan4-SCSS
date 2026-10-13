@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tesa Aurelio Ginting, Ilmu Komputer FMIPA</title>
+  <meta name="description" content="Portofolio Tesa Aurelio Ginting, mahasiswa Ilmu Komputer FMIPA. Dikembangkan dari Tugas Rutin 1 dengan tata letak CSS Grid dan Flexbox.">
+  <meta name="author" content="Tesa Aurelio Ginting">
+  <meta name="keywords" content="ilmu komputer, fmipa, mahasiswa, portofolio">
+
+  <meta property="og:title" content="Portofolio — Tesa Aurelio Ginting">
+  <meta property="og:description" content="Portofolio mahasiswa Ilmu Komputer FMIPA dengan tata letak CSS Grid dan Flexbox.">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="assets/potret.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page">
+
+  <header class="site-header">
+    <div class="site-header__top">
+      <p class="site-header__kicker">Program Studi Ilmu Komputer, FMIPA</p>
+      <p class="site-header__nim">NIM 4253250037</p>
+    </div>
+
+    <h1 class="site-header__title">Tesa Aurelio Ginting</h1>
+
+    <nav class="site-nav" aria-label="Navigasi halaman">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="#profil">Profil</a></li>
+        <li><a class="site-nav__link" href="#keahlian">Keahlian</a></li>
+        <li><a class="site-nav__link" href="#riwayat">Riwayat proyek</a></li>
+        <li><a class="site-nav__link" href="#tanya">Tanya jawab</a></li>
+        <li><a class="site-nav__link" href="#formulir">Formulir</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-content">
+
+    <section class="section" id="profil">
+      <h2 class="section__title">Profil singkat</h2>
+
+      <div class="profile-card">
+        <figure class="profile-card__figure">
+          <div class="profile-card__frame">
+            <img class="profile-card__image"
+                 src="assets/potret.jpg"
+                 alt="Tesa Aurelio Ginting mengenakan seragam sekolah putih dengan dasi abu-abu, berlatar warna merah"
+                 width="400" height="500">
+          </div>
+          <figcaption class="profile-card__caption">
+            Foto formal &mdash; <time datetime="2025-11">November 2025</time>
+          </figcaption>
+        </figure>
+
+        <div class="profile-card__body">
+          <p class="profile-card__text">
+            Lulusan SMA dengan Jurusan MIPA yang saat ini melanjutkan studi di
+            Universitas Negeri Medan pada Program Studi Ilmu Komputer, FMIPA.
+            Fokus belajar saat ini ada pada pengembangan web, mulai dari
+            struktur dokumen HTML yang benar hingga logika pemrograman di
+            balik antarmuka yang interaktif.
+          </p>
+
+          <address class="profile-card__address">
+            Hubungi<br>
+            Email: <a href="mailto:tesaaurelioginting@gmail.com">tesaaurelioginting@gmail.com</a>
+          </address>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="keahlian">
+      <h2 class="section__title">Keahlian</h2>
+
+      <div class="skill-list">
+        <div class="skill-list__item">
+          <h3 class="skill-list__title">Bahasa</h3>
+          <p class="skill-list__text">
+            Saat ini belum ada bahasa pemrograman yang saya kuasai secara
+            mendalam. Ke depannya saya akan mempelajarinya seiring perkuliahan.
+          </p>
+        </div>
+
+        <div class="skill-list__item">
+          <h3 class="skill-list__title">Sedang dipelajari</h3>
+          <p class="skill-list__text">
+            Mempelajari HTML, CSS, dan JavaScript untuk dasar pada Mata Kuliah
+            Pemrograman Web.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="riwayat">
+      <h2 class="section__title">Riwayat proyek</h2>
+
+      <!-- Garis waktu: dipilih karena kontennya memang berurutan (TR1 lalu TR2) -->
+      <div class="timeline">
+        <article class="timeline__item">
+          <h3 class="timeline__title">Tugas Rutin 1, Landing Page Pribadi</h3>
+          <p class="timeline__text">
+            Membangun halaman identitas pribadi dengan struktur HTML5 yang
+            valid menurut W3C, sebagai tugas mata kuliah Pemrograman Web.
+          </p>
+          <p class="timeline__status timeline__status--done">Selesai, lolos validasi W3C</p>
+        </article>
+
+        <article class="timeline__item">
+          <h3 class="timeline__title">Tugas Rutin 2, Portofolio CSS Layouting</h3>
+          <p class="timeline__text">
+            Mengembangkan halaman ini menjadi portofolio bertata letak
+            menggunakan kombinasi CSS Grid dan Flexbox.
+          </p>
+          <p class="timeline__status timeline__status--progress">Dalam pengerjaan</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="tanya">
+      <h2 class="section__title">Tanya jawab</h2>
+
+      <div class="faq">
+        <details class="faq__item">
+          <summary class="faq__question">Kenapa halaman TR1 dibuat tanpa CSS?</summary>
+          <p class="faq__answer">
+            Karena fokus tugas itu adalah menguji struktur HTML5 semantik yang
+            valid dan aksesibel, bukan tampilan visual.
+          </p>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">Apa itu HTML semantik?</summary>
+          <p class="faq__answer">
+            Penggunaan tag yang menjelaskan makna kontennya sendiri, seperti
+            <code>&lt;nav&gt;</code> untuk navigasi, bukan sekadar
+            <code>&lt;div&gt;</code> generik.
+          </p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="formulir">
+      <h2 class="section__title">Kirim pesan</h2>
+
+      <form class="contact-form" action="#" method="post">
+
+        <fieldset class="contact-form__fieldset">
+          <legend class="contact-form__legend">Data pengirim</legend>
+
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="nama_pengirim">Nama lengkap</label>
+            <input class="contact-form__input" type="text" id="nama_pengirim" name="nama_pengirim"
+                   required minlength="3" maxlength="60" placeholder="Tulis nama lengkap">
+          </div>
+
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="email_pengirim">Alamat email</label>
+            <input class="contact-form__input" type="email" id="email_pengirim" name="email_pengirim"
+                   required placeholder="nama@email.com">
+          </div>
+
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="no_hp">Nomor HP</label>
+            <input class="contact-form__input" type="tel" id="no_hp" name="no_hp"
+                   pattern="[0-9]{10,13}" placeholder="08xxxxxxxxxx">
+          </div>
+        </fieldset>
+
+        <fieldset class="contact-form__fieldset">
+          <legend class="contact-form__legend">Tambahan</legend>
+
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="tanggal_lahir">Tanggal lahir</label>
+            <input class="contact-form__input" type="date" id="tanggal_lahir" name="tanggal_lahir">
+          </div>
+
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="warna_tema">Warna favorit</label>
+            <input class="contact-form__input contact-form__input--color" type="color" id="warna_tema" name="warna_tema" value="#1e3a8a">
+          </div>
+
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="tingkat_semangat">Tingkat kepentingan pesan (1&ndash;10)</label>
+            <input class="contact-form__input" type="range" id="tingkat_semangat" name="tingkat_semangat"
+                   min="1" max="10" step="1" value="7">
+          </div>
+
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="portofolio">Tautan portofolio</label>
+            <input class="contact-form__input" type="url" id="portofolio" name="portofolio" placeholder="https://github.com/usn">
+          </div>
+        </fieldset>
+
+        <div class="contact-form__field contact-form__field--full">
+          <label class="contact-form__label" for="pesan_isi">Isi pesan</label>
+          <textarea class="contact-form__input" id="pesan_isi" name="pesan_isi" rows="5"
+                    required placeholder="Tulis pesan Anda di sini"></textarea>
+        </div>
+
+        <div class="contact-form__actions">
+          <button class="button button--primary" type="submit">Kirim</button>
+          <button class="button button--ghost" type="reset">Bersihkan formulir</button>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+  <aside class="sidebar">
+    <section class="sidebar__block">
+      <h2 class="sidebar__title">Catatan</h2>
+      <p class="sidebar__text">
+        Halaman ini adalah bagian dari tugas mata kuliah Pemrograman Web,
+        disusun untuk memenuhi standar struktur HTML5 semantik dan validasi
+        W3C, kini dikembangkan dengan tata letak CSS Grid dan Flexbox.
+      </p>
+    </section>
+
+    <section class="sidebar__block">
+      <h2 class="sidebar__title">Info singkat</h2>
+      <dl class="sidebar__list">
+        <dt class="sidebar__term">Program studi</dt>
+        <dd class="sidebar__desc">Ilmu Komputer</dd>
+        <dt class="sidebar__term">Fakultas</dt>
+        <dd class="sidebar__desc">Matematika dan Ilmu Pengetahuan Alam</dd>
+        <dt class="sidebar__term">Kampus</dt>
+        <dd class="sidebar__desc">Universitas Negeri Medan</dd>
+      </dl>
+    </section>
+  </aside>
+
+  <footer class="site-footer">
+    <p class="site-footer__text">
+      <time datetime="2026">2026</time> Tesa Aurelio Ginting, Program Studi
+      Ilmu Komputer, Fakultas Matematika dan Ilmu Pengetahuan Alam.
+    </p>
+  </footer>
+
+</body>
+</html>

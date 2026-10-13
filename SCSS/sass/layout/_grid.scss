@@ -1,0 +1,45 @@
+@use "../abstracts" as *;
+
+.page {
+  min-height: 100vh;
+  color: var(--ink);
+  background-color: var(--paper);
+
+  display: grid;
+  grid-template-columns: minmax(0, 2.6fr) minmax(0, 1fr);
+  grid-template-areas:
+    "header  header"
+    "main    sidebar"
+    "footer  footer";
+  column-gap: $spacing-unit * 2.5;
+  row-gap: $spacing-unit * 2;
+  max-width: $max-width;
+  margin-inline: auto;
+  padding: ($spacing-unit * 2) ($spacing-unit * 1.5);
+
+  @include responsive-mobile {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+  }
+}
+
+.site-header  { grid-area: header; }
+
+.main-content {
+  grid-area: main;
+  display: grid;
+  gap: $spacing-unit * 2.5;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  display: grid;
+  gap: $spacing-unit * 1.5;
+  align-content: start;
+}
+
+.site-footer { grid-area: footer; }

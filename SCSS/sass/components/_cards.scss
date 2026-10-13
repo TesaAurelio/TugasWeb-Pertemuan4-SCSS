@@ -1,0 +1,192 @@
+@use "../abstracts" as *;
+
+.section {
+  &__title {
+    font-family: $font-display;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 1.1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 2.75rem;
+      height: 3px;
+      background-color: var(--signal);
+    }
+  }
+}
+
+.profile-card {
+  @include flex($align: flex-start, $gap: $spacing-unit * 2);
+
+  &__figure { flex: 0 0 180px; }
+
+  &__frame {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 10px -10px -10px 10px;
+      border: 1.5px solid var(--signal);
+      border-radius: $radius;
+      z-index: 0;
+    }
+  }
+
+  &__image {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border: 1px solid var(--ink);
+    border-radius: $radius;
+  }
+
+  &__caption {
+    margin-top: 1rem;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+  }
+
+  &__body {
+    flex: 1 1 320px;
+    padding-top: 0.2rem;
+  }
+
+  &__text { max-width: 62ch; }
+
+  &__address {
+    display: block;
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    font-style: normal;
+
+    a {
+      color: var(--signal);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
+}
+
+.skill-list {
+  display: grid;
+  border-top: 1px solid var(--line);
+
+  &__item {
+    display: grid;
+    grid-template-columns: minmax(140px, 200px) 1fr;
+    gap: $spacing-unit * 1.5;
+    padding-block: 1.1rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-weight: 500;
+    font-size: 1.05rem;
+  }
+
+  &__text {
+    color: var(--ink-soft);
+    max-width: 62ch;
+  }
+}
+
+.timeline {
+  position: relative;
+  padding-left: $spacing-unit * 1.75;
+  border-left: 1.5px solid var(--line);
+
+  &__item {
+    position: relative;
+    padding-bottom: $spacing-unit * 2;
+
+    &:last-child { padding-bottom: 0; }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: calc(#{$spacing-unit * -1.75} - 5px);
+      top: 0.4rem;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: var(--signal);
+    }
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+
+  &__text {
+    color: var(--ink-soft);
+    margin-top: 0.4rem;
+    max-width: 62ch;
+  }
+
+  &__status {
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-size: 0.82rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+
+    &--done { background-color: var(--signal-soft); color: var(--signal); }
+    &--progress { background-color: var(--flag-soft); color: var(--flag); }
+  }
+}
+
+.faq {
+  &__item {
+    border-bottom: 1px solid var(--line);
+    padding-block: 1rem;
+
+    &:first-child { border-top: 1px solid var(--line); }
+
+    &[open] .faq__question::before { content: "\2212"; }
+  }
+
+  &__question {
+    cursor: pointer;
+    font-weight: 500;
+    list-style: none;
+    @include flex($gap: 0.6rem, $align: center);
+
+    &::before {
+      content: "+";
+      color: var(--signal);
+      font-family: $font-display;
+      font-size: 1.1rem;
+      width: 1rem;
+    }
+
+    &::-webkit-details-marker { display: none; }
+  }
+
+  &__answer {
+    margin-top: 0.7rem;
+    padding-left: 1.6rem;
+    color: var(--ink-soft);
+    max-width: 62ch;
+
+    code {
+      background-color: var(--panel);
+      padding: 0.1rem 0.35rem;
+      border-radius: $radius;
+      font-size: 0.85em;
+    }
+  }
+}

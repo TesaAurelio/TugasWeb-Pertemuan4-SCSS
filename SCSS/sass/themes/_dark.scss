@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @each $nama, $nilai in $colors-dark {
+      --#{$nama}: #{$nilai};
+    }
+  }
+
+  .site-header::before { opacity: 0.65; }
+  .profile-card__image { border-color: var(--line); }
+  .button--primary { color: #06120b; }
+}

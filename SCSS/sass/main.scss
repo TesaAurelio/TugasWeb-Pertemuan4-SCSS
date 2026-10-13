@@ -1,0 +1,22 @@
+// =========================================================
+// MAIN.SCSS — Titik masuk kompilasi
+// Tugas Rutin 4: Konversi CSS ke SCSS (7-1 pattern)
+// Tesa Aurelio Ginting (4253250037)
+//
+// Urutan @use di bawah ini SENGAJA dijaga, karena menentukan
+// urutan cascade di CSS hasil compile:
+//   1. base      -> reset, tipografi, variabel warna terang (:root)
+//   2. layout    -> struktur grid, header, sidebar, footer
+//   3. components -> tombol, kartu, form
+//   4. themes    -> override mode gelap (harus PALING TERAKHIR,
+//                   supaya :root di dalam @media dark ini yang
+//                   "menang" saat sistem memakai mode gelap)
+//
+// pages/ dan vendors/ tidak di-@use di sini karena isinya masih
+// kosong.
+// =========================================================
+
+@use "base";
+@use "layout";
+@use "components";
+@use "themes";

@@ -1,0 +1,4 @@
+// Menggabungkan semua partial di folder abstracts/ jadi satu pintu masuk,
+// supaya file lain cukup menulis: @use "../abstracts" as *;
+@forward "variables";
+@forward "mixins";

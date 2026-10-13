@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+
+.sidebar {
+  &__block {
+    @include surface(var(--panel), $spacing-unit * 1.25);
+  }
+
+  &__title {
+    font-family: $font-display;
+    font-style: italic;
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &__text {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  &__term {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-top: 0.7rem;
+
+    &:first-child { margin-top: 0; }
+  }
+
+  &__desc {
+    font-size: 0.95rem;
+  }
+}
